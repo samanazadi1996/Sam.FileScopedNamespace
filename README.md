@@ -18,13 +18,13 @@ This extension is designed for Visual Studio to provide you with the capability 
 4. Select "File Scoped Namespace"
 	- From the context menu, select the option "File Scoped Namespace". This will initiate the process of converting all classes within the project to the new format.
 
-![Image1](https://github.com/samanazadi1996/Sam.ClassUpgradeToDotNet8.Extension/blob/master/Documents/Images/Image1.png?raw=true)
+![Image1](https://raw.githubusercontent.com/samanazadi1996/Sam.FileScopedNamespace/master/Documents/Images/Image1.png)
 
 By following these steps, you can efficiently apply the new format to all classes within your project using the provided extension.
 
-![Image2](https://github.com/samanazadi1996/Sam.ClassUpgradeToDotNet8.Extension/blob/master/Documents/Images/Image2.png?raw=true)
+![Image2](https://raw.githubusercontent.com/samanazadi1996/Sam.FileScopedNamespace/master/Documents/Images/Image2.png)
 
-### In the new format:
+### In the new format
 
 1. Each class or method declaration is on a separate line, enhancing code readability.
 2. Semicolons (;) are used instead of curly braces ({}) for declarations and statements, which further improves code clarity.
