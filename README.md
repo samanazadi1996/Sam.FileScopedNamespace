@@ -6,7 +6,7 @@ This extension is designed for Visual Studio to provide you with the capability 
 
 ## Here are the steps to get started
 
-1. Download and Install the Extension
+1. [Download](https://marketplace.visualstudio.com/items?itemName=SamanAzadi1996.FileScopedNamespace) and Install the Extension
 	- Visit the extension page and follow the instructions to download and install the extension for your Visual Studio environment.
 
 2. Open Your Project
