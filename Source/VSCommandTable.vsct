@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Include href="KnownImageIds.vsct"/>
+	<Include href="VSGlobals.vsct"/>
+
+	<Commands package="FileScopedNamespace">
+		<Groups>
+			<Group guid="FileScopedNamespace" id="MyMenuGroup" priority="0x0600">
+				<Parent guid="VSMainMenu" id="ProjectNode"/>
+			</Group>
+		</Groups>
+
+		<!--This section defines the elements the user can interact with, like a menu command or a button
+        or combo box in a toolbar. -->
+		<Buttons>
+			<Button guid="FileScopedNamespace" id="FileScopedNamespaceCommand" priority="0x0100" type="Button">
+				<Parent guid="FileScopedNamespace" id="MyMenuGroup" />
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>File Scoped Namespace</ButtonText>
+					<LocCanonicalName>.FileScopedNamespace.FileScopedNamespaceCommand</LocCanonicalName>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<Symbols>
+		<GuidSymbol name="FileScopedNamespace" value="{eafef57e-9702-4016-bef1-40163fa5bce8}">
+			<IDSymbol name="MyMenuGroup" value="0x0001" />
+			<IDSymbol name="FileScopedNamespaceCommand" value="0x0100" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
