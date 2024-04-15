@@ -12,8 +12,8 @@ internal static class SamFormater
     public static string Format(List<string> lines)
     {
         var code = string.Empty;
-        var isDotnet8 = lines.Any(p => p.Trim().Contains("namespace")) && lines.Any(p => p.Trim().StartsWith("namespace") && p.Trim().EndsWith(";"));
-        if (!isDotnet8)
+        var isFileScoped = lines.Any(p => p.Trim().Contains("namespace")) && lines.Any(p => p.Trim().StartsWith("namespace") && p.Trim().EndsWith(";"));
+        if (!isFileScoped)
         {
             code = AddSemiToNamespace(lines);
             code = RemoveBracketsAfterNamespace(code);
