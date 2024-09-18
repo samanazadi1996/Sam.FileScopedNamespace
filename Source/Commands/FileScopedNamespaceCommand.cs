@@ -27,7 +27,7 @@ namespace FileScopedNamespace
 
                             var formattedResult = SamFormater.Format(lines);
 
-                            File.WriteAllText(filePath, formattedResult);
+                            File.WriteAllText(filePath, formattedResult.Trim());
 
                             Console.WriteLine($"File '{filePath}' has been formatted successfully.");
                         }
