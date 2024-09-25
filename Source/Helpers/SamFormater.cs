@@ -9,21 +9,20 @@ namespace FileScopedNamespace.Helpers;
 
 internal static class SamFormater
 {
-    public static string Format(List<string> lines)
+    public static bool TryFormat(List<string> lines, out string result)
     {
-        var code = string.Empty;
         var isFileScoped = lines.Any(p => p.Trim().Contains("namespace")) && lines.Any(p => p.Trim().StartsWith("namespace") && p.Trim().EndsWith(";"));
         if (!isFileScoped)
         {
-            code = AddSemiToNamespace(lines);
+            var code = AddSemiToNamespace(lines);
             code = RemoveBracketsAfterNamespace(code);
-            return FormatCode(code);
+            result = FormatCode(code);
+            return true;
         }
-        else
-        {
-            return FormatCode(string.Join(Environment.NewLine, lines));
 
-        }
+        result = string.Empty;
+
+        return false;
     }
 
     static string AddSemiToNamespace(List<string> lines)

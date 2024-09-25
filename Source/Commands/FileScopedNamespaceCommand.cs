@@ -25,11 +25,11 @@ namespace FileScopedNamespace
                         {
                             var lines = File.ReadAllLines(filePath).ToList();
 
-                            var formattedResult = SamFormater.Format(lines);
-
-                            File.WriteAllText(filePath, formattedResult.Trim());
-
-                            Console.WriteLine($"File '{filePath}' has been formatted successfully.");
+                            if (SamFormater.TryFormat(lines, out var formattedResult))
+                            {
+                                File.WriteAllText(filePath, formattedResult.Trim());
+                                Console.WriteLine($"File '{filePath}' has been formatted successfully.");
+                            }
                         }
                         catch (Exception ex)
                         {
